@@ -6,7 +6,6 @@ public:
         DP[1] = nums[0];
         for (std::size_t i = 2; i <= nums.size(); ++i)
         {
-            DP[i] = 0;
             DP[i] = std::max(DP[i - 1], DP[i - 2] + nums[i - 1]);
         }
         return DP[nums.size()];
